@@ -1,0 +1,19 @@
+@use "globals" as g;
+@use "util" as u;
+@use "layout";
+@use "register";
+@use "productive";
+@use "main";
+@use "form";
+@use "main-header";
+@use "footer";
+
+body {
+  font-family: g.$open-sans;
+  width: 100%;
+  min-height: 100vh;
+
+  // @include u.breakpoint(tab) {
+  //   background-image: url("../images/bg-header-desktop.png");
+  // }
+}

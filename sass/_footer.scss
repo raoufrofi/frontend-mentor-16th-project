@@ -1,0 +1,46 @@
+@use "globals" as g;
+@use "util" as u;
+@use "layout" as l;
+
+.footer__parent {
+  width: 100%;
+  background-color: g.$very-dark-blue;
+}
+
+.footer {
+  color: #fff;
+  padding: 4rem 0;
+
+  img {
+    width: calc(120px + 4vw);
+  }
+
+  &__list {
+    flex-direction: column;
+    padding: 3rem 0;
+
+    @include u.breakpoint(tab) {
+      flex-direction: row;
+    }
+
+    img {
+      width: 20px;
+      margin-top: 0.5rem;
+      margin-right: 0.5rem;
+    }
+  }
+
+  .links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    a {
+      color: #fff;
+    }
+  }
+
+  i {
+    margin-right: 1rem;
+  }
+}

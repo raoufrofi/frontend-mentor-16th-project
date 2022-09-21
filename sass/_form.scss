@@ -1,0 +1,32 @@
+@use "globals" as g;
+@use "util" as u;
+@use "layout" as l;
+
+.email__box {
+  display: grid;
+  gap: 1rem;
+
+  input {
+    padding: u.em(16);
+    outline: none;
+  }
+
+  input:nth-child(1)::placeholder {
+    color: g.$desaturated-blue;
+    font-family: g.$raleway;
+  }
+
+  input:nth-child(2) {
+    background-color: g.$bright-blue;
+    color: g.$light-grayish-blue;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+  }
+}
+
+.main__email {
+  @include u.breakpoint(tab) {
+    grid-template-columns: 2fr 1fr;
+  }
+}

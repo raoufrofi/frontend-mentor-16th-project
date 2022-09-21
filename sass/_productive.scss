@@ -1,0 +1,66 @@
+@use "globals" as g;
+@use "util" as u;
+@use "layout";
+
+.curve {
+  img {
+    vertical-align: bottom;
+  }
+}
+
+.productive__parent {
+  width: 100%;
+  background-color: g.$light-grayish-blue;
+}
+
+.productive {
+  flex-direction: column;
+  padding: u.em(64) 0;
+
+  @include u.breakpoint(tab) {
+    flex-direction: row-reverse;
+  }
+
+  a {
+    color: g.$moderate-cyan;
+    font-size: 14px;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    text-align: center;
+
+    img {
+      width: 20px;
+      vertical-align: middle;
+    }
+  }
+}
+
+.review {
+  padding: u.rem(30);
+  border-radius: 5px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+  blockquote {
+    font-size: 15px;
+    line-height: 1.5;
+    color: g.$very-dark-blue;
+  }
+
+  & > img {
+    width: 20px;
+  }
+}
+
+.profile {
+  img {
+    width: 40px;
+    border-radius: 50%;
+  }
+  &__name {
+    font-weight: bold;
+  }
+
+  &__detail {
+    font-size: u.rem(11);
+  }
+}

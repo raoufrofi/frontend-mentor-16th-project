@@ -1,0 +1,27 @@
+@use "globals" as g;
+@use "util" as u;
+@use "layout" as l;
+
+.header {
+  font-family: g.$raleway;
+  padding: u.em(30) 0;
+
+  object {
+    width: calc(70px + 5vw);
+    font-size: 0;
+  }
+
+  ul {
+    gap: calc(u.em(16) + 1vw);
+
+    a {
+      color: black;
+      font-weight: bold;
+    }
+  }
+
+  @include u.breakpoint(tab) {
+    grid-template-columns: 1fr 1fr;
+    text-align: left;
+  }
+}

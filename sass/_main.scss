@@ -1,0 +1,23 @@
+@use "globals" as g;
+@use "util" as u;
+@use "layout" as l;
+
+.main {
+  padding: u.em(64) 0;
+  flex-direction: column;
+  text-align: center;
+
+  article {
+    p {
+      margin-bottom: u.em(24);
+    }
+  }
+
+  object {
+    max-width: 550px;
+  }
+
+  @include u.breakpoint(tab) {
+    flex-direction: row-reverse;
+  }
+}
